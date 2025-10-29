@@ -1,5 +1,5 @@
 const { OAuth2Client } = require("google-auth-library");
-const userRepository = require("../repositories/userRepository");
+const userRepository = process.env.USER_SERVICE_URL || 'http://localhost:8086'; //require("../repositories/userRepository");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 
